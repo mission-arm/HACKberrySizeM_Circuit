@@ -7797,6 +7797,28 @@ Source: AVX .. aphvc.pdf</description>
 </library>
 <library name="HbSizeM">
 <packages>
+<package name="NN_SERVO">
+<pad name="SERVO_SIGNAL" x="0" y="2.54" drill="1" shape="square"/>
+<pad name="SERVO_5V" x="0" y="0" drill="1" shape="square"/>
+<pad name="SERVO_GND" x="0" y="-2.54" drill="1" shape="square"/>
+<text x="-2.54" y="5.08" size="1.27" layer="21">SERVO</text>
+</package>
+<package name="SKRPACE010">
+<smd name="PINA_LEFT" x="-2.075" y="1.075" dx="1.05" dy="0.65" layer="1"/>
+<smd name="PINB_LEFT" x="-2.075" y="-1.075" dx="1.05" dy="0.65" layer="1"/>
+<smd name="PINB_RIGHT" x="2.075" y="-1.075" dx="1.05" dy="0.65" layer="1"/>
+<smd name="PINA_RIGHT" x="2.075" y="1.075" dx="1.05" dy="0.65" layer="1"/>
+<wire x1="-2.3" y1="1.6" x2="2.3" y2="1.6" width="0.127" layer="21"/>
+<wire x1="2.3" y1="1.6" x2="2.3" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="2.3" y1="-1.6" x2="-2.3" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="-2.3" y1="-1.6" x2="-2.3" y2="1.6" width="0.127" layer="21"/>
+</package>
+<package name="NN_SENSOR">
+<pad name="SIGNAL" x="0" y="1.905" drill="1" shape="long"/>
+<pad name="5V" x="0" y="0" drill="1" shape="long"/>
+<pad name="GND" x="0" y="-1.905" drill="1" shape="square"/>
+<text x="0" y="3.81" size="1.27" layer="21">SENSOR</text>
+</package>
 <package name="SPC4078">
 <description>&lt;b&gt;DC POWER JACK 2.5mm&lt;/b&gt; Right Angle, Through Hole, Rated 5A at 16VDC, PC Terminals&lt;p&gt;
 Source: www.spctechnology.com .. 84N1162.pdf&lt;br&gt;
@@ -7915,30 +7937,26 @@ Created by Robert Siegler &amp;lt;rs@kmp-ag.de&amp;gt;</description>
 <rectangle x1="2.75" y1="-1.5" x2="3.25" y2="1.5" layer="51"/>
 <rectangle x1="-3.1" y1="-1.25" x2="-2.9" y2="1.25" layer="51"/>
 </package>
-<package name="NN_SERVO">
-<pad name="SERVO_SIGNAL" x="0" y="2.54" drill="1" shape="square"/>
-<pad name="SERVO_5V" x="0" y="0" drill="1" shape="square"/>
-<pad name="SERVO_GND" x="0" y="-2.54" drill="1" shape="square"/>
-<text x="-2.54" y="5.08" size="1.27" layer="21">SERVO</text>
-</package>
-<package name="SKRPACE010">
-<smd name="PINA_LEFT" x="-2.075" y="1.075" dx="1.05" dy="0.65" layer="1"/>
-<smd name="PINB_LEFT" x="-2.075" y="-1.075" dx="1.05" dy="0.65" layer="1"/>
-<smd name="PINB_RIGHT" x="2.075" y="-1.075" dx="1.05" dy="0.65" layer="1"/>
-<smd name="PINA_RIGHT" x="2.075" y="1.075" dx="1.05" dy="0.65" layer="1"/>
-<wire x1="-2.3" y1="1.6" x2="2.3" y2="1.6" width="0.127" layer="21"/>
-<wire x1="2.3" y1="1.6" x2="2.3" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="2.3" y1="-1.6" x2="-2.3" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="-2.3" y1="-1.6" x2="-2.3" y2="1.6" width="0.127" layer="21"/>
-</package>
-<package name="NN_SENSOR">
-<pad name="SIGNAL" x="0" y="1.905" drill="1" shape="long"/>
-<pad name="5V" x="0" y="0" drill="1" shape="long"/>
-<pad name="GND" x="0" y="-1.905" drill="1" shape="square"/>
-<text x="0" y="3.81" size="1.27" layer="21">SENSOR</text>
-</package>
 </packages>
 <symbols>
+<symbol name="NN_SERVO">
+<pin name="SERVO_SIGNAL" x="-2.54" y="2.54" length="middle"/>
+<pin name="SERVO_5V" x="-2.54" y="0" length="middle"/>
+<pin name="SERVO_GND" x="-2.54" y="-2.54" length="middle"/>
+<text x="0" y="5.08" size="1.27" layer="94">SERVO</text>
+</symbol>
+<symbol name="SKRPACE010">
+<pin name="A_LEFT" x="-7.62" y="0" visible="off" length="middle"/>
+<pin name="B_LEFT" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<text x="-7.62" y="-5.08" size="1.778" layer="94">SKRPACE010</text>
+</symbol>
+<symbol name="NN_SENSOR">
+<pin name="SIGNAL" x="-10.16" y="5.08" length="middle"/>
+<pin name="5V" x="-10.16" y="2.54" length="middle"/>
+<pin name="GND" x="-10.16" y="0" length="middle"/>
+<text x="-10.16" y="7.62" size="1.27" layer="94">SENSOR</text>
+</symbol>
 <symbol name="JACK-PLUG">
 <wire x1="-5.715" y1="1.27" x2="-5.715" y2="3.81" width="0.1524" layer="94" curve="-180"/>
 <wire x1="-5.715" y1="3.81" x2="-1.27" y2="3.81" width="0.1524" layer="94"/>
@@ -7964,59 +7982,8 @@ Created by Robert Siegler &amp;lt;rs@kmp-ag.de&amp;gt;</description>
 <vertex x="0.508" y="-1.27"/>
 </polygon>
 </symbol>
-<symbol name="NN_SERVO">
-<pin name="SERVO_SIGNAL" x="-2.54" y="2.54" length="middle"/>
-<pin name="SERVO_5V" x="-2.54" y="0" length="middle"/>
-<pin name="SERVO_GND" x="-2.54" y="-2.54" length="middle"/>
-<text x="0" y="5.08" size="1.27" layer="94">SERVO</text>
-</symbol>
-<symbol name="SKRPACE010">
-<pin name="A_LEFT" x="-7.62" y="0" visible="off" length="middle"/>
-<pin name="B_LEFT" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
-<wire x1="-2.54" y1="0" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
-<text x="-7.62" y="-5.08" size="1.778" layer="94">SKRPACE010</text>
-</symbol>
-<symbol name="NN_SENSOR">
-<pin name="SIGNAL" x="-10.16" y="5.08" length="middle"/>
-<pin name="5V" x="-10.16" y="2.54" length="middle"/>
-<pin name="GND" x="-10.16" y="0" length="middle"/>
-<text x="-10.16" y="7.62" size="1.27" layer="94">SENSOR</text>
-</symbol>
 </symbols>
 <devicesets>
-<deviceset name="JACK-PLUG" prefix="J" uservalue="yes">
-<description>&lt;b&gt;DC POWER JACK&lt;/b&gt;&lt;br&gt;
-Power Jack, DC, Right Angle, Through Hole, Rated 5A at 16VDC, PC Terminals&lt;p&gt;
-Distributor: &lt;b&gt;Farnell (www.Farnell.de)&lt;/b&gt;&lt;br&gt;
-Drawing: &lt;b&gt;84N1161.pdf / 84N1162.pdf&lt;/b&gt;&lt;br&gt;
-Manufacturer: &lt;b&gt;SPC Technology (www.spctechnology.com)&lt;/b&gt;&lt;br&gt;
-Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
-<gates>
-<gate name="G$1" symbol="JACK-PLUG" x="0" y="0"/>
-</gates>
-<devices>
-<device name="1" package="SPC4078">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="0" package="SPC4077">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="NN_SERVO">
 <gates>
 <gate name="G$1" symbol="NN_SERVO" x="-2.54" y="0"/>
@@ -8067,6 +8034,39 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="JACK-PLUG" prefix="J" uservalue="yes">
+<description>&lt;b&gt;DC POWER JACK&lt;/b&gt;&lt;br&gt;
+Power Jack, DC, Right Angle, Through Hole, Rated 5A at 16VDC, PC Terminals&lt;p&gt;
+Distributor: &lt;b&gt;Farnell (www.Farnell.de)&lt;/b&gt;&lt;br&gt;
+Drawing: &lt;b&gt;84N1161.pdf / 84N1162.pdf&lt;/b&gt;&lt;br&gt;
+Manufacturer: &lt;b&gt;SPC Technology (www.spctechnology.com)&lt;/b&gt;&lt;br&gt;
+Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
+<gates>
+<gate name="G$1" symbol="JACK-PLUG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1" package="SPC4078">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0" package="SPC4077">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -8103,7 +8103,6 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <part name="U$6" library="HbHandBoard_SizeS" deviceset="POLOLU_A_STAR_32U4_MICRO_SMD" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="HbSizeM" deviceset="JACK-PLUG" device="1"/>
 <part name="U$7" library="HbSizeM" deviceset="NN_SERVO" device=""/>
 <part name="U$11" library="HbSizeM" deviceset="NN_SERVO" device=""/>
 <part name="U$1" library="HbSizeM" deviceset="SKRPACE010" device=""/>
@@ -8116,6 +8115,7 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <part name="U$15" library="HbSizeM" deviceset="SKRPACE010" device=""/>
 <part name="U$10" library="HbSizeM" deviceset="NN_SENSOR" device=""/>
 <part name="U$16" library="HbHandBoard_SizeS" deviceset="53398-0371" device=""/>
+<part name="J1" library="HbSizeM" deviceset="JACK-PLUG" device="1"/>
 </parts>
 <sheets>
 <sheet>
@@ -8125,7 +8125,7 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <instances>
 <instance part="P+1" gate="1" x="76.2" y="231.14"/>
 <instance part="GND1" gate="1" x="76.2" y="198.12"/>
-<instance part="J1" gate="G$1" x="66.04" y="213.36"/>
+<instance part="J1" gate="G$1" x="71.12" y="213.36"/>
 </instances>
 <busses>
 </busses>
@@ -8133,7 +8133,6 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <net name="V+" class="0">
 <segment>
 <pinref part="P+1" gate="1" pin="V+"/>
-<wire x1="71.12" y1="215.9" x2="76.2" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="215.9" x2="76.2" y2="228.6" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="3"/>
 </segment>
@@ -8143,7 +8142,6 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="76.2" y1="210.82" x2="76.2" y2="200.66" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="76.2" y1="210.82" x2="71.12" y2="210.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

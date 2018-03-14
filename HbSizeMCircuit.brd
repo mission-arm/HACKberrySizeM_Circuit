@@ -53,7 +53,7 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
@@ -1674,6 +1674,28 @@ MELF 0.25 W</description>
 </library>
 <library name="HbSizeM">
 <packages>
+<package name="SKRPACE010">
+<smd name="PINA_LEFT" x="-2.075" y="1.075" dx="1.05" dy="0.65" layer="1"/>
+<smd name="PINB_LEFT" x="-2.075" y="-1.075" dx="1.05" dy="0.65" layer="1"/>
+<smd name="PINB_RIGHT" x="2.075" y="-1.075" dx="1.05" dy="0.65" layer="1"/>
+<smd name="PINA_RIGHT" x="2.075" y="1.075" dx="1.05" dy="0.65" layer="1"/>
+<wire x1="-2.3" y1="1.6" x2="2.3" y2="1.6" width="0.127" layer="21"/>
+<wire x1="2.3" y1="1.6" x2="2.3" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="2.3" y1="-1.6" x2="-2.3" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="-2.3" y1="-1.6" x2="-2.3" y2="1.6" width="0.127" layer="21"/>
+</package>
+<package name="NN_SENSOR">
+<pad name="SIGNAL" x="0" y="1.905" drill="1" shape="long"/>
+<pad name="5V" x="0" y="0" drill="1" shape="long"/>
+<pad name="GND" x="0" y="-1.905" drill="1" shape="square"/>
+<text x="0" y="3.81" size="1.27" layer="21">SENSOR</text>
+</package>
+<package name="NN_SERVO">
+<pad name="SERVO_SIGNAL" x="0" y="2.54" drill="1" shape="square"/>
+<pad name="SERVO_5V" x="0" y="0" drill="1" shape="square"/>
+<pad name="SERVO_GND" x="0" y="-2.54" drill="1" shape="square"/>
+<text x="-2.54" y="5.08" size="1.27" layer="21">SERVO</text>
+</package>
 <package name="SPC4078">
 <description>&lt;b&gt;DC POWER JACK 2.5mm&lt;/b&gt; Right Angle, Through Hole, Rated 5A at 16VDC, PC Terminals&lt;p&gt;
 Source: www.spctechnology.com .. 84N1162.pdf&lt;br&gt;
@@ -1732,28 +1754,6 @@ Created by Robert Siegler &amp;lt;rs@kmp-ag.de&amp;gt;</description>
 <rectangle x1="-1.25" y1="-5.05" x2="1.25" y2="-4.55" layer="51"/>
 <rectangle x1="2.75" y1="-1.5" x2="3.25" y2="1.5" layer="51"/>
 <rectangle x1="-3.1" y1="-1.25" x2="-2.9" y2="1.25" layer="51"/>
-</package>
-<package name="SKRPACE010">
-<smd name="PINA_LEFT" x="-2.075" y="1.075" dx="1.05" dy="0.65" layer="1"/>
-<smd name="PINB_LEFT" x="-2.075" y="-1.075" dx="1.05" dy="0.65" layer="1"/>
-<smd name="PINB_RIGHT" x="2.075" y="-1.075" dx="1.05" dy="0.65" layer="1"/>
-<smd name="PINA_RIGHT" x="2.075" y="1.075" dx="1.05" dy="0.65" layer="1"/>
-<wire x1="-2.3" y1="1.6" x2="2.3" y2="1.6" width="0.127" layer="21"/>
-<wire x1="2.3" y1="1.6" x2="2.3" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="2.3" y1="-1.6" x2="-2.3" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="-2.3" y1="-1.6" x2="-2.3" y2="1.6" width="0.127" layer="21"/>
-</package>
-<package name="NN_SENSOR">
-<pad name="SIGNAL" x="0" y="1.905" drill="1" shape="long"/>
-<pad name="5V" x="0" y="0" drill="1" shape="long"/>
-<pad name="GND" x="0" y="-1.905" drill="1" shape="square"/>
-<text x="0" y="3.81" size="1.27" layer="21">SENSOR</text>
-</package>
-<package name="NN_SERVO">
-<pad name="SERVO_SIGNAL" x="0" y="2.54" drill="1" shape="square"/>
-<pad name="SERVO_5V" x="0" y="0" drill="1" shape="square"/>
-<pad name="SERVO_GND" x="0" y="-2.54" drill="1" shape="square"/>
-<text x="-2.54" y="5.08" size="1.27" layer="21">SERVO</text>
 </package>
 </packages>
 </library>
@@ -2029,7 +2029,6 @@ design rules under a new name.</description>
 <element name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M1206" package3d_urn="urn:adsk.eagle:package:26088/1" value="100kΩ" x="41.656" y="9.906" rot="MR90"/>
 <element name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="C1206" package3d_urn="urn:adsk.eagle:package:26140/1" value="10uF" x="36.322" y="33.02" rot="R90"/>
 <element name="C2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="C1206" package3d_urn="urn:adsk.eagle:package:26140/1" value="22uF" x="30.48" y="32.766"/>
-<element name="J1" library="HbSizeM" package="SPC4078" value="" x="7.10438125" y="38.757859375" rot="MR180"/>
 <element name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M1206" package3d_urn="urn:adsk.eagle:package:26088/1" value="1kΩ" x="41.148" y="21.082" rot="R270"/>
 <element name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M1206" package3d_urn="urn:adsk.eagle:package:26088/1" value="1.2kΩ" x="39.116" y="33.02" rot="R270"/>
 <element name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M1206" package3d_urn="urn:adsk.eagle:package:26088/1" value="200Ω" x="44.196" y="21.082" rot="R90"/>
@@ -2050,20 +2049,19 @@ design rules under a new name.</description>
 <element name="U$8" library="HbHandBoard_SizeS" package="OKL_T3_W12" value="OKL_T3_W12" x="25.654" y="18.288"/>
 <element name="U$9" library="HbHandBoard_SizeS" package="53398-0371" value="53398-0371" x="13.97" y="20.574" rot="MR90"/>
 <element name="U$16" library="HbHandBoard_SizeS" package="53398-0371" value="53398-0371" x="13.97" y="20.574" rot="R270"/>
+<element name="J1" library="HbSizeM" package="SPC4078" value="" x="7.112" y="38.862"/>
 </elements>
 <signals>
 <signal name="V+">
-<contactref element="J1" pad="3"/>
 <contactref element="U$8" pad="PIN_2-1"/>
 <contactref element="U$8" pad="PIN_2-2"/>
 <contactref element="U$8" pad="PIN_2-3"/>
 <contactref element="C2" pad="1"/>
 <contactref element="R4" pad="2"/>
-<wire x1="10.10438125" y1="38.757859375" x2="13.302240625" y2="35.56" width="0.8128" layer="1"/>
 <wire x1="21.844" y1="35.56" x2="24.892" y2="32.512" width="0.8128" layer="1"/>
 <wire x1="24.892" y1="32.512" x2="26.568" y2="32.512" width="0.8128" layer="1"/>
 <wire x1="26.568" y1="32.512" x2="26.67" y2="32.614" width="0.8128" layer="1"/>
-<wire x1="13.302240625" y1="35.56" x2="21.844" y2="35.56" width="0.8128" layer="1"/>
+<wire x1="21.844" y1="35.56" x2="13.302240625" y2="35.56" width="0.8128" layer="1"/>
 <wire x1="26.67" y1="32.614" x2="28.928" y2="32.614" width="0.8128" layer="1"/>
 <wire x1="28.928" y1="32.614" x2="29.08" y2="32.766" width="0.8128" layer="1"/>
 <wire x1="29.08" y1="32.766" x2="29.08" y2="30.372" width="0.8128" layer="1"/>
@@ -2071,6 +2069,9 @@ design rules under a new name.</description>
 <wire x1="29.464" y1="29.988" x2="28.444" y2="28.968" width="0.3048" layer="1"/>
 <wire x1="28.444" y1="28.968" x2="28.319" y2="28.968" width="0.3048" layer="1"/>
 <wire x1="28.319" y1="28.968" x2="26.154" y2="28.968" width="0.3048" layer="1"/>
+<contactref element="J1" pad="3"/>
+<wire x1="13.302240625" y1="35.56" x2="10.112" y2="38.750240625" width="0.8128" layer="1"/>
+<wire x1="10.112" y1="38.750240625" x2="10.112" y2="38.862" width="0.8128" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="U$2" pad="PIN_M_L"/>
@@ -2105,12 +2106,9 @@ design rules under a new name.</description>
 <contactref element="U$6" pad="PIN_GND"/>
 <contactref element="U$10" pad="GND"/>
 <contactref element="U$16" pad="PIN_GND"/>
-<contactref element="J1" pad="1"/>
-<wire x1="4.10438125" y1="38.757859375" x2="5.991859375" y2="38.757859375" width="0.254" layer="16"/>
-<wire x1="9.86848125" y1="42.63448125" x2="11.684" y2="42.63448125" width="0.254" layer="16"/>
+<wire x1="11.684" y1="42.63448125" x2="9.86848125" y2="42.63448125" width="0.254" layer="16"/>
 <wire x1="11.684" y1="42.63448125" x2="13.462" y2="42.63448125" width="0.254" layer="16"/>
 <wire x1="13.462" y1="42.63448125" x2="14.224" y2="42.63448125" width="0.254" layer="16"/>
-<wire x1="5.991859375" y1="38.757859375" x2="9.86848125" y2="42.63448125" width="0.254" layer="16"/>
 <wire x1="14.478" y1="52.804640625" x2="13.180640625" y2="52.804640625" width="0.254" layer="16"/>
 <wire x1="11.684" y1="51.308" x2="11.684" y2="42.63448125" width="0.254" layer="16"/>
 <wire x1="13.180640625" y1="52.804640625" x2="11.684" y2="51.308" width="0.254" layer="16"/>
@@ -2147,8 +2145,7 @@ design rules under a new name.</description>
 <wire x1="17.272" y1="18.542" x2="19.304" y2="16.51" width="0.3048" layer="1"/>
 <wire x1="19.304" y1="16.51" x2="29.972" y2="16.51" width="0.3048" layer="1"/>
 <wire x1="29.972" y1="16.51" x2="31.754" y2="18.292" width="0.3048" layer="1"/>
-<wire x1="31.754" y1="18.292" x2="31.754" y2="18.542" width="0.3048" layer="1"/>
-<wire x1="31.754" y1="18.542" x2="31.754" y2="18.788" width="0.3048" layer="1"/>
+<wire x1="31.754" y1="18.292" x2="31.754" y2="18.788" width="0.3048" layer="1"/>
 <wire x1="25.654" y1="24.13" x2="29.21" y2="24.13" width="0.3048" layer="16"/>
 <wire x1="29.21" y1="24.13" x2="31.75" y2="21.59" width="0.3048" layer="16"/>
 <via x="31.75" y="21.59" extent="1-16" drill="0.35"/>
@@ -2204,6 +2201,9 @@ design rules under a new name.</description>
 <vertex x="10.16" y="57.404"/>
 <vertex x="10.16" y="44.45"/>
 </polygon>
+<contactref element="J1" pad="1"/>
+<wire x1="9.86848125" y1="42.63448125" x2="6.096" y2="38.862" width="0.3048" layer="16"/>
+<wire x1="6.096" y1="38.862" x2="4.112" y2="38.862" width="0.3048" layer="16"/>
 </signal>
 <signal name="PIN_ON/OFF">
 <contactref element="U$2" pad="PIN_U_L"/>
@@ -2447,15 +2447,11 @@ design rules under a new name.</description>
 <approved hash="5,1,a2582cd96ec0e7ae"/>
 <approved hash="5,16,a2582eda6cc3e7ae"/>
 <approved hash="4,1,50d729e5ac8f9a5d"/>
-<approved hash="4,1,12f90e823b63511d"/>
 <approved hash="4,1,13fe8239db37acaf"/>
-<approved hash="4,1,0c37b3e630521d64"/>
 <approved hash="4,1,11f04a0623889d76"/>
 <approved hash="4,1,1d807fb20064948e"/>
 <approved hash="4,16,ad967cb3b48b22a3"/>
-<approved hash="4,16,12f90e823b63511d"/>
 <approved hash="4,16,13f98104db35aca1"/>
-<approved hash="4,16,0c37b3e630521d64"/>
 <approved hash="4,16,1d807fb20064948e"/>
 <approved hash="4,16,11f04a0623889d76"/>
 </errors>
